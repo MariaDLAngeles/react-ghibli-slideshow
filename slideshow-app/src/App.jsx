@@ -1,11 +1,10 @@
-import './App.css'
-import Slideshow from './Slideshow'
+import "./App.css";
+import Slideshow from "./Slideshow";
+import filmData from "./film-data.json";
 
 function App() {
-
-  return (
-    <Slideshow />
-  )
+  console.log(filmData);
+  return <Slideshow data={filmData} />;
 }
 
-export default App
+export default App;
