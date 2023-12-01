@@ -1,3 +1,75 @@
 * {
-  background-color: aqua;
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slideshowWrapper {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slideshow {
+  display: grid;
+  grid-template-columns: 300px 400px;
+  grid-template-rows: 50px 350px 50px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 36px;
+  justify-self: center;
+
+}
+
+.buttons {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  place-self: center;
+
+  
+}
+
+img {
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  align-items: center;
+  
+}
+
+.blockOfText {
+  text-align: center;
+  place-self: start;
+}
+
+button {
+  margin: 5px;
+  background-color: #249987;
+  color: white;
+  font-size: medium;
+  
+}
+
+.japTitle {
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+
+.releaseDate {
+  font-size: x-small;
+}
+
+p {
+  margin-top: 0;
+}
+
+button:disabled {
+  background-color: #575757;
 }

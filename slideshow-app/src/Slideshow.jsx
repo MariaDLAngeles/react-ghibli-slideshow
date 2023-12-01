@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Slideshow(props) {
   // console.log('this is props in Slideshow:', props)
-
+  
   const [index, setIndex] = useState(0)
 
   const handleBackClick = () => {
@@ -28,6 +28,7 @@ function Slideshow(props) {
   }
 
   return (
+    <div className="slideshowWrapper">
     <div className="slideshow">
       <div className="title">
       {props.data[index].title}
@@ -40,11 +41,12 @@ function Slideshow(props) {
       <p className="releaseDate">{props.data[index].release_date}</p>
       <p className="description">{props.data[index].description}</p>
       </div>
-      <div>
-      <button onClick={handleBackClick}>Back</button>
-      <button onClick={handleNextClick}>Next</button>
-      <button onClick={handleStartOverClick}>Start Over</button>
+      <div className="buttons">
+      <button onClick={handleStartOverClick} disabled={!index}>START OVER</button>
+      <button onClick={handleBackClick} disabled={!index}>BACK</button>
+      <button onClick={handleNextClick} disabled={index === props.data.length - 1}>NEXT</button>
       </div>
+    </div>
     </div>
   );
 }
