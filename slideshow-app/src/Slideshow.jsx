@@ -29,11 +29,22 @@ function Slideshow(props) {
 
   return (
     <div className="slideshow">
+      <div className="title">
       {props.data[index].title}
-      <br></br>
+      </div>
+      <div className="posterImage">
+        <img src={props.data[index].image} alt="Movie Poster" />
+      </div>
+      <div className="blockOfText">
+      <p className="japTitle">{props.data[index].original_title}</p>
+      <p className="releaseDate">{props.data[index].release_date}</p>
+      <p className="description">{props.data[index].description}</p>
+      </div>
+      <div>
       <button onClick={handleBackClick}>Back</button>
       <button onClick={handleNextClick}>Next</button>
       <button onClick={handleStartOverClick}>Start Over</button>
+      </div>
     </div>
   );
 }
