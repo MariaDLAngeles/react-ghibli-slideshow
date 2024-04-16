@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import Slideshow from "./Slideshow";
 import filmData from "./film-data.json";
 
